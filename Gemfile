@@ -9,6 +9,10 @@ gem 'rails', '~> 6.0.0'
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
+gem 'redis', '~> 4.0'
+gem 'bcrypt', '~> 3.1.7'
+gem 'jwt_sessions', '~> 2'
+gem 'rack-cors'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
@@ -26,14 +30,18 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # gem 'rack-cors'
 
 group :development, :test do
+  gem 'pry-byebug', '~> 3.4'
+  gem 'pry-rails', '~> 0.3.4'
+  gem 'rspec-rails', '~> 3.7'
+  gem 'factory_bot_rails', '~> 4.8'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :development do
-  gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
